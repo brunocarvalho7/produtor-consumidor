@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:id="@+id/ll_produtor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="25dp"
+        android:layout_centerHorizontal="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="34dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtProdutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Produtor"
+                android:inputType="number"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnIniciarProdutor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Iniciar"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_consumidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_produtor">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="34dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtConsumidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Consumidor"
+                android:inputType="number"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnIniciarConsumidor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Iniciar"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnIniciarDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_consumidor"
+        android:text="Iniciar Defaults"/>
+
+    <TextView
+        android:id="@+id/logs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnIniciarDefault"
+        android:scrollbars="horizontal|vertical"
+        android:text="" />
+
+
+</RelativeLayout>
